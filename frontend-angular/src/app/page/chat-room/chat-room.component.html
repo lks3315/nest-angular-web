@@ -1,1 +1,7 @@
-<p>chat-room works!</p>
+<div>
+  <mat-row *ngFor="let message of messages">
+    <mat-card *ngIf="message.from !== nickname">
+
+    </mat-card>
+  </mat-row>
+</div>
