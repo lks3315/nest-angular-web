@@ -1,0 +1,23 @@
+<div class="center-style">
+  <h1 style="font-size: xx-large">홈 화면</h1>
+</div>
+
+<div class="center-style">
+  <form class="example-form">
+    <mat-form-field class="example-full-width" [style.fontSize.px]="25">
+      <mat-label>닉네임 정하기</mat-label>
+      <input matInput type="text" [(ngModel)]="nickname" maxlength="40" placeholder="Input your nickname" [ngModelOptions]="{standalone: true}">
+      <mat-hint>닉네임을 입력하세요.</mat-hint>
+      <!--    <mat-error *ngIf="emailFormControl.hasError('required')">-->
+      <!--      Email is <strong>required</strong>-->
+      <!--    </mat-error>-->
+    </mat-form-field>
+  </form>
+</div>
+
+<div style="text-align: center; margin-top: 1%; width: 130%">
+  <button mat-raised-button color="primary" style="font-size: x-large; width: 200px; height: 50px"
+    (click)="joinChat()" [disabled]="nickname === ''">
+    입장
+  </button>
+</div>
